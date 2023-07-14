@@ -10,14 +10,19 @@
 
 int main(void)
 {
-	for (int i = 97; i < 123; i++)
+	int i = 97;
+
+	while (i < 123)
 	{
 		putchar(i);
+		i++;
 	}
 
-	for (int i = 65; i < 91; i++)
+	i = 65;
+	while (i < 91)
 	{
 		putchar(i);
+		i++;
 	}
 
 	putchar('\n');
