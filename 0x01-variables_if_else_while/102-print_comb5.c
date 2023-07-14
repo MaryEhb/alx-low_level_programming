@@ -18,18 +18,33 @@ int main(void)
 		while (j < 10)
 		{
 
-			putchar(i + 48);
-			putchar(j + 48);
+			int l = 0;
 
-			if (i != 9 || j != 9)
+			while (l < 10)
 			{
-				putchar(',');
-				putchar(' ');
+				int m = 0;
+
+				while (m < 10)
+				{
+					putchar(i + 48);
+					putchar(j + 48);
+					putchar(' ');
+					putchar(l + 48);
+					putchar(m + 48);
+					if (i != 9 || j != 9 || l != 9 || m != 9)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+
+					m++;
+				}
+
+				l++;
 			}
 
 			j++;
 		}
-
 		i++;
 	}
 
