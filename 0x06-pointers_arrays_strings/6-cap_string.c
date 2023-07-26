@@ -9,7 +9,7 @@
 char *cap_string(char *str)
 {
 	char separators[] = {' ', '\n', ',', ';', '.', '!', '?',
-		'"', '(', ')', '{', '}'};
+		'"', '(', ')', '{', '}', '\t'};
 	int i = 0, j;
 	int foundSep = 1;
 
@@ -20,14 +20,15 @@ char *cap_string(char *str)
 			foundSep = 0;
 			str[i] = str[i] - ('a' - 'A');
 		}
-		else if (foundSep && str[i] >= 'A' && str[i] <= 'Z')
+		else
 		{
 			foundSep = 0;
 		}
-		else if (!foundSep)
+
+		if (!foundSep)
 		{
 			j = 0;
-			while (j < 10)
+			while (j < sizeof(separators))
 			{
 				if (str[i] == separators[j])
 				{
