@@ -8,7 +8,8 @@
 
 char *cap_string(char *str)
 {
-	char separators[] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
+	char separators[] = {' ', '\n', ',', ';', '.', '!', '?',
+		'"', '(', ')', '{', '}'};
 	int i = 0, j;
 	int foundSep = 1;
 
