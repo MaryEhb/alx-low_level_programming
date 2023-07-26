@@ -28,7 +28,7 @@ char *cap_string(char *str)
 		if (!foundSep)
 		{
 			j = 0;
-			while (j < sizeof(separators))
+			while (j < 13)
 			{
 				if (str[i] == separators[j])
 				{
