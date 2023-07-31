@@ -10,14 +10,24 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int i = 0,j;
+	unsigned int i = 0, j, bytes = 0;
 
 	while (s[i] != '\0')
 	{
 		j = 0;
-		while (j != 
+		while (accept[j] != '\0')
+		{
+			if (s[i] == accept[j])
+			{
+				bytes++;
+				break;
+			}
+			else if (accept[j + 1] == '\0')
+				return (bytes);
+			j++;
+		} 
 		i++;
 	}
 
-	return (i);
+	return (bytes);
 }
