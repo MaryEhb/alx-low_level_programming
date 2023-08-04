@@ -22,13 +22,13 @@ int main(int argc, char **argv)
 	{
 		int n = atoi(argv[1]), change = 0;
 
-		change += n/25;
+		change += n / 25;
 		n = n % 25;
-		change += n/10;
+		change += n / 10;
 		n = n % 10;
-		change += n/5;
+		change += n / 5;
 		n = n % 5;
-		change += n/2;
+		change += n / 2;
 		n = n % 2;
 		change += n;
 		printf("%d\n", change);
