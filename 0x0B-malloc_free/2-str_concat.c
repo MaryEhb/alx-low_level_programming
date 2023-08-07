@@ -13,16 +13,23 @@ char *str_concat(char *s1, char *s2)
 	unsigned int size1 = 0, size2 = 0, i = 0;
 	char *p;
 
-	while (s1[size1])
+	if (s1 != 0)
 	{
-		size1++;
-	}
-	while (s2[size2])
-	{
-		size2++;
+		while (s1[size1])
+		{
+			size1++;
+		}
 	}
 
-	p = (char *)malloc(sizeof(char) * (size1 + size2 - 1));
+	if (s2 != 0)
+	{
+		while (s2[size2])
+		{
+			size2++;
+		}
+	}
+
+	p = (char *)malloc(sizeof(char) * (size1 + size2 + 1));
 
 	if (!p)
 		return (0);
