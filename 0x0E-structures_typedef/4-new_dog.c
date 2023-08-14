@@ -16,7 +16,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *name_cp;
 	char *owner_cp;
 
-	if (!name || !owner)
+	if (!name || !age || !owner)
 	{
 		return (0);
 	}
