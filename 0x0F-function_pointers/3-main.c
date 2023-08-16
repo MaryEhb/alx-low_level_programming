@@ -23,11 +23,7 @@ int main(int argc, char **argv)
 			return (0);
 		}
 		res = func(atoi(argv[1]), atoi(argv[3]));
-		if(!res)
-		{
-			printf("Error\n");
-			return (0);
-		}
+
 		printf("%d\n", res);
 	}
 
