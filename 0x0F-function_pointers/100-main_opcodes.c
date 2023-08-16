@@ -26,11 +26,9 @@ int main(int argc, char **argv)
 		exit(2);
 	}
 
-	while (arg)
+	while (arg--)
 	{
-		printf("%.2hhx%s", *p, (arg ? " " : "\n"));
-		p++;
-		arg--;
+		printf("%.2hhx%s", *p++, (arg ? " " : "\n"));
 	}
 
 	return (0);
