@@ -5,6 +5,7 @@
  * print_numbers -  prints numbers, followed by a new line.
  * @separator: what will separate the numbers
  * @n: count of args
+ * @...: args
  * Return: nothing
  */
 
