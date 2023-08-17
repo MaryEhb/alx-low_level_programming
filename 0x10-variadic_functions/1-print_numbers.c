@@ -6,7 +6,7 @@
  * @separator: what will separate the numbers
  * @n: count of args
  * @...: args
- * Return: 0
+ * Return: nothing
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
@@ -23,7 +23,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_start(args, n);
 	while (i++ < n)
 	{
-		printf("%d%s", va_arg(args, int), (separator && i < n - 1 ? separator : ""));
+		printf("%d%s", va_arg(args, int), (separator && i < n ? separator : ""));
 	}
 	printf("\n");
 
