@@ -18,8 +18,10 @@ int binary_search(int *array, size_t size, int value)
 {
 	size_t start_index = 0;
 	size_t end_index = size - 1;
-	size_t middle;
-	size_t i;
+	size_t middle, i;
+
+	if (!array)
+		return (-1);
 
 	while (start_index <= end_index)
 	{
